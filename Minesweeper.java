@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 
 public class Minesweeper {
 
-
+// Reading from a file or standard input
     public static void main(String args[]) throws FileNotFoundException {
         Scanner scan;
         
