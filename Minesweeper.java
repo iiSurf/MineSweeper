@@ -45,7 +45,30 @@ public class Minesweeper {
 
     private int neighbors(char[][] board, int i, int j) {
         int nums = 0;
-        
-        return 1;
+        if (i - 1 >= 0 && board[i - 1][j] == '*') {
+            nums = nums + 1;
+        }
+        if (i + 1 < board.length && board[i + 1][j] == '*') {
+            nums = nums + 1;
+        }
+        if (j - 1 >= 0 && board[i][j - 1] == '*') {
+            nums = nums + 1;
+        }
+        if (j + 1 < board.length && board[i][j + 1] == '*') {
+            nums = nums + 1;
+        }
+        if (i - 1 >= 0 && j - 1 >= 0 && board[i - 1][j - 1] == '*') {
+            nums = nums + 1;
+        }
+        if (i - 1 >= 0 && j + 1 < board.length && board[i - 1][j + 1] == '*') {
+            nums = nums + 1;
+        }
+        if (i + 1 < board.length && j - 1 >= 0 && board[i + 1][j - 1] == '*') {
+            nums = nums + 1;
+        }
+        if (i + 1 < board.length && j +1 < board.length && board [i + 1][j + 1] == '*') {
+            nums = nums + 1;
+        }
+        return nums;
     }
 }
