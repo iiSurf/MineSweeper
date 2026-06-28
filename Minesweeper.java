@@ -30,6 +30,7 @@ public class Minesweeper {
             {'.', '*', '.', '.'},
             {'.', '.', '.', '.'}
         };
+
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j] == '*') {
@@ -40,5 +41,11 @@ public class Minesweeper {
             }
             System.out.println();
         }
+    }
+
+    private int neighbors(char[][] board, int i, int j) {
+        int nums = 0;
+        
+        return 1;
     }
 }
