@@ -6,6 +6,7 @@ public class Minesweeper {
 
 // Reading from a file or standard input
     public static void main(String args[]) throws FileNotFoundException {
+
         Scanner scan;
         
         if (args.length > 0) {
@@ -15,21 +16,25 @@ public class Minesweeper {
         }
 
         while (scan.hasNextLine()) {
-            String textLine = scan.nextLine();
-            System.out.println(textLine);
+            int n = scan.nextInt();
+            int m = scan.nextInt();
+            if (n == 0 && m == 0) {
+                break;
+            }
+            scan.nextLine();
+            gameBoard(scan, n, m);
         }
-
         scan.close();
-        gameBoard();
     }
 
-    private static void gameBoard() {
-        char[][] board = {
-            {'*', '.', '.', '.'},
-            {'.', '.', '.', '.'},
-            {'.', '*', '.', '.'},
-            {'.', '.', '.', '.'}
-        };
+    private static void gameBoard(Scanner scan, int n, int m) {
+        char[][] board = new char[n][m];
+        for (int i = 0; i < n; i++) {
+            String line =scan.nextLine();
+            for (int j = 0; j < m; j++) {
+                board[i][j] = line.charAt(j);
+            }
+        }
 
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
