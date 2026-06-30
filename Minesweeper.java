@@ -28,9 +28,11 @@ public class Minesweeper {
     }
 
     private static void gameBoard(Scanner scan, int n, int m) {
+        int fieldCounter = 1;
+        System.out.println("Field #" + fieldCounter + ":");
         char[][] board = new char[n][m];
         for (int i = 0; i < n; i++) {
-            String line =scan.nextLine();
+            String line = scan.nextLine();
             for (int j = 0; j < m; j++) {
                 board[i][j] = line.charAt(j);
             }
