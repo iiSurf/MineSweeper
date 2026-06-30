@@ -8,7 +8,7 @@ public class Minesweeper {
     public static void main(String args[]) throws FileNotFoundException {
 
         Scanner scan;
-        
+
         if (args.length > 0) {
             scan = new Scanner(new File(args[0]));
         } else {
@@ -48,6 +48,7 @@ public class Minesweeper {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     private static int neighbors(char[][] board, int i, int j) {
