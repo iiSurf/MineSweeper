@@ -10,7 +10,7 @@ public class Minesweeper {
         int fieldCounter = 1;
         Scanner scan;
 
-        if (args.length > 0) {
+        if (args.length == 1) {
             scan = new Scanner(new File(args[0]));
         } else {
             scan = new Scanner(System.in);
